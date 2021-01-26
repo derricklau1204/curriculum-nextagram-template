@@ -1,1 +1,2 @@
-web: gunicorn start:app
+ release: python migrate.py
+ web: gunicorn start:app
