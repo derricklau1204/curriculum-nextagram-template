@@ -22,7 +22,6 @@ jmespath==0.10.0
 jsmin==2.2.2
 MarkupSafe==1.1.0
 peewee==3.8.2
-peewee-db-evolve==3.7.0
 psycopg2==2.8.6
 psycopg2-binary==2.8.6
 pycodestyle==2.5.0
