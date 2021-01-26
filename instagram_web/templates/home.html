@@ -8,5 +8,18 @@
 {% endblock %}
 
 {% block content %}
-  <h1>Homepage</h1>
+  <div class="container">
+    <h1 style="font-family: monospace; font-weight: bold">Homepage</h1>
+    {% if current_user.is_authenticated %}
+      <h5 style="font-family: monospace; font-weight: bold">You are now logged in as {{current_user.username}}.</h5>
+    {% endif %}
+    
+    <h4 style="font-family: monospace; font-weight: bold">All users:</h4>
+    {% for user in users %}
+      <li>
+        <a href="{{url_for('users.show', username=user.username)}}" style="font-family: monospace"> {{user.username}}</a>
+      </li>
+    {% endfor %}
+
+  </div>
 {% endblock %}

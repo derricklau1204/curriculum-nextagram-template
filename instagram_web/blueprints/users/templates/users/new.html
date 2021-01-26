@@ -1,1 +1,19 @@
-<h1>Users#new</h1>
+{% extends "_layout.html" %}
+{% block content %}
+
+<h1 style="font-family: monospace; font-weight: bold">New User</h1>
+
+<form action="{{url_for('users.create')}}" method = "POST">
+  <input type="hidden" name ="csrf_token" value ="{{ csrf_token() }}"/>
+  <label style="font-family: monospace; font-weight: bold">Username</label>
+  <input type="text" name ="username"/>
+  <label style="font-family: monospace; font-weight: bold">Email</label>
+  <input type="email" name ="email"/>
+  <label style="font-family: monospace; font-weight: bold">Password</label>
+  <input type="password" name ="password"/>
+  <input type="submit" style="font-family: monospace; font-weight: bold"/>
+</form>
+
+
+
+{% endblock %}
